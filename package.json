@@ -1,0 +1,67 @@
+{
+  "name": "admin",
+  "version": "0.1.0",
+  "private": true,
+  "author": "jikeytang <jikeytang@gmail.com>",
+  "title": "微燕商城管理",
+  "description": "微燕商城",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npm run serve",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-plugin-eslint": "^3.8.0",
+    "@vue/cli-service": "^3.8.0",
+    "core-js": "^2.6.9",
+    "echarts": "^4.2.1",
+    "element-ui": "^2.9.1",
+    "js-cookie": "^2.2.0",
+    "mockjs": "^1.0.1-beta3",
+    "moment": "^2.24.0",
+    "vue": "^2.6.10",
+    "vue-axios": "^2.1.4",
+    "vue-echarts": "^4.0.3",
+    "vue-router": "^3.0.3",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-polyfill": "^6.26.0",
+    "compression-webpack-plugin": "^2.0.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
+    "style-resources-loader": "^1.2.1",
+    "vue-cli-plugin-element": "^1.0.1",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/standard"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}

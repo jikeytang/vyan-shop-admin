@@ -1,0 +1,9 @@
+$color: #333;
+$bg: #f5f6f7;
+$currentColor: #1890ff;
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  currentColor: $currentColor;
+}
