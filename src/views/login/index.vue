@@ -1,5 +1,5 @@
 <template>
-  <div class="login-container">
+  <div class="app-login">
     <el-form v-if="showDialog" ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" auto-complete="on" label-position="left">
 
       <div class="title-container">
@@ -126,12 +126,12 @@ $bg: #283443;
 $light_gray: #fff;
 $cursor: #fff;
 @supports (-webkit-mask: none) and (not (cater-color: $cursor)) {
-  .login-container .el-input input {
+  .app-login .el-input input {
     color: $cursor;
   }
 }
 /* reset element-ui css */
-.login-container {
+.app-login {
   .el-input {
     display: inline-block;
     height: 47px;
@@ -171,7 +171,7 @@ $cursor: #fff;
 $bg: #2d3a4b;
 $dark_gray: #889aa4;
 $light_gray: #eee;
-.login-container {
+.app-login {
   min-height: 100%;
   width: 100%;
   background-color: $bg;
