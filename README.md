@@ -1,4 +1,5 @@
 # admin
+[微燕商城](https://github.com/jikeytang/vyan-shop-weixin) admin端
 
 ## Project setup
 ```
