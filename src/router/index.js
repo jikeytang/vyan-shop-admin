@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import routes from './routes'
+import { getToken } from '@/utils/auth';
 // import store from '@/store'
+
 
 Vue.use(Router)
 
@@ -9,12 +11,19 @@ const router = new Router({
   routes
 })
 
+const whiteList = ['/login']
+
 router.beforeEach((to, from, next) => {
-  const token = localStorage.getItem('token')
+  const token = getToken()
+
   if (token) {
-    console.log(1)
+    next()
   } else {
-    console.log('no token')
+    if (whiteList.includes(to.path)) {
+      next()
+    } else {
+      next(`/login?redirect=${to.path}`)
+    }
   }
 
   next()

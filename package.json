@@ -12,7 +12,6 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
-  
   "dependencies": {
     "@vue/cli-plugin-babel": "^3.8.0",
     "@vue/cli-plugin-eslint": "^3.8.0",
