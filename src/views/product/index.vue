@@ -4,7 +4,7 @@
       <template #query>
         <el-form :inline="true" class="product-form" :model="listQuery" label-width="140px" size="small" label-position="right">
           <el-form-item label="输入搜索">
-            <el-input v-model="listQuery.keyword" placeholder="商品名称" />
+            <el-input v-model="listQuery.name" placeholder="商品名称" />
           </el-form-item>
           <el-form-item label="商品货号">
             <el-input v-model="listQuery.productSn" placeholder="商品货号" />
@@ -13,7 +13,7 @@
             <el-cascader v-model="selectProductCateValue" clearable :options="productCateOptions" />
           </el-form-item>
           <el-form-item label="商品品牌">
-            <el-select v-model="listQuery.brandId" placeholder="请选择品牌" clearable>
+            <el-select v-model="listQuery.brandName" placeholder="请选择品牌" clearable>
               <el-option v-for="item in brandOptions" :key="item.value" :label="item.label" :value="item.value" />
             </el-select>
           </el-form-item>
@@ -42,7 +42,7 @@
       <el-table ref="productTable" v-loading="loading" class="app-table" :data="list" style="width: 100%" border @selection-change="handleSelectionChange">
         <el-table-column type="selection" width="60" align="center" />
         <el-table-column label="编号" width="100" align="center">
-          <template slot-scope="scope">{{ scope.row.id }}</template>
+          <template slot-scope="scope">{{ scope.row._id }}</template>
         </el-table-column>
         <el-table-column label="商品图片" width="120" align="center">
           <template slot-scope="scope">
@@ -141,14 +141,11 @@
 import { fetchList } from '@/api/product'
 
 const defaultListQuery = {
-  keyword: null,
-  pageNum: 1,
-  pageSize: 5,
-  publishStatus: null,
-  verifyStatus: null,
-  productSn: null,
-  productCategoryId: null,
-  brandId: null
+  name: '',
+  productSn: '',
+  brandName: '',
+  publishStatus: true,
+  verifyStatus: true
 }
 
 export default {
@@ -187,8 +184,9 @@ export default {
       this.loading = true
       fetchList(this.listQuery).then(res => {
         this.loading = false
-        this.list = res.data.list
-        this.total = res.data.total
+        console.log(res)
+        this.list = res.data.data
+        // this.total = res.data.total
       }).catch(_ => {
         this.loading = false
       })
