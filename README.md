@@ -4,7 +4,7 @@
 
 先看一下我们完成的效果 
 
-- [vyan-shop-admin - Preivew](http://jikey.gitee.io/vyan-shop-admin)
+- [vyan-shop-admin - Preivew](http://jikey.gitee.io/vyan-shop-admin/#/login)
 - [vyan-shop-admin - Github](https://github.com/jikeytang/vyan-shop-admin)
 
 目前暂时不支持移动端，`Login`视频耗流量，也没有适配。
