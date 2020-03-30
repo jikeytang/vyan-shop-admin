@@ -1,5 +1,5 @@
 import { login, logout, getInfo } from '@/api/login'
-import { getToken, setToken } from '@/utils/auth'
+import { getToken, setToken, removeToken } from '@/utils/auth'
 
 const user = {
   namespaced: true,
@@ -62,7 +62,7 @@ const user = {
       return new Promise((resolve, reject) => {
         logout(state.token).then(() => {
           commit('SET_TOKEN', '')
-          localStorage.removeItem('token')
+          removeToken()
           resolve()
         }).catch(error => {
           reject(error)

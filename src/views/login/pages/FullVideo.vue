@@ -8,7 +8,7 @@
 <script>
 import Point from './Point'
 
-const jscss = 'http://www.jscss.me/Public/blog/media/'
+const jscss = `${process.env.VUE_APP_BASE_URL}media/`
 
 export default {
   name: 'FullVideo',

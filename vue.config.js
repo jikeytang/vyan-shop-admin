@@ -2,7 +2,8 @@ const path = require('path')
 const CompressionPlugin = require('compression-webpack-plugin')
 const isProd = process.env.NODE_ENV === 'production'
 // 项目目录
-let baseUrl = '/vshop/admin/dist/'
+// let baseUrl = '/vshop/admin/dist/'
+const baseUrl = `${process.env.VUE_APP_BASE_URL}`
 
 function resolve (dir) {
   return path.join(__dirname, dir)

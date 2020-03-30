@@ -14,7 +14,7 @@
       </el-menu>
 
       <div class="helper-menu">
-        <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
+        <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="hover">
           <div class="avatar-wrapper">
             <img :src="avatar | defaultImg(this)" class="user-avatar">
             <span class="name">{{ name }}</span>
@@ -129,6 +129,7 @@ export default {
     float:right;
     .avatar-wrapper{
       position:relative;
+      cursor: pointer;
       .anticon{
         color:#fff;
         margin-left:5px;

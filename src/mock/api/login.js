@@ -2,7 +2,7 @@ const userMap = {
   roles: ['admin'],
   token: 'admin',
   introduction: '我是管理员',
-  avatar: '/img/avatar.232904c2.png',
+  avatar: 'img/avatar.232904c2.png',
   name: 'Admin'
 }
 
