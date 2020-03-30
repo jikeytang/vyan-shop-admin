@@ -7,10 +7,17 @@ export function fetchList (cid, params) {
   })
 }
 
-
 export function createProductAttr (data) {
   return request({
     url: '/productAttribute/create',
+    method: 'post',
+    data: data
+  })
+}
+
+export function getProductAttrInfo (data) {
+  return request({
+    url: '/productAttribute/info',
     method: 'post',
     data: data
   })

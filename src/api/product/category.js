@@ -14,3 +14,19 @@ export function createProductCate (data) {
     data: data
   })
 }
+
+export function getProductCate (data) {
+  return request({
+    url: '/productCategory/create',
+    method: 'post',
+    data: data
+  })
+}
+
+export function updateProductCate (data) {
+  return request({
+    url: '/productCategory/create',
+    method: 'post',
+    data: data
+  })
+}

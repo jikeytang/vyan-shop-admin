@@ -17,6 +17,7 @@
         <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
           <div class="avatar-wrapper">
             <img :src="avatar | defaultImg(this)" class="user-avatar">
+            <span class="name">{{ name }}</span>
           </div>
           <el-dropdown-menu slot="dropdown">
             <router-link :to="{ name: 'user' }">
@@ -50,6 +51,7 @@ export default {
       if (!value) {
         return require('assets/images/avatar.png')
       }
+      return value
     }
   },
   data () {
@@ -65,7 +67,8 @@ export default {
       'header'
     ]),
     ...mapGetters([
-      'avatar'
+      'avatar',
+      'name'
     ])
   },
   methods: {
@@ -136,6 +139,9 @@ export default {
         height:40px;
         border-radius:50%;
         border:1px solid #ccc;
+      }
+      .name{
+        margin-left: 10px;
       }
     }
   }
