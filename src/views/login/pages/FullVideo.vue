@@ -8,7 +8,8 @@
 <script>
 import Point from './Point'
 
-const jscss = `${process.env.VUE_APP_BASE_URL}media/`
+// const jscss = `${process.env.VUE_APP_BASE_URL}media/`
+const jscss = `https://jikeytang.imfast.io/video/`
 
 export default {
   name: 'FullVideo',
