@@ -19,7 +19,8 @@ export default {
   data () {
     return {
       video: null,
-      videoList: [`${jscss}jing.mp4`, `${jscss}gril.mp4`, `${jscss}mountain.mp4`],
+      // videoList: [`${jscss}jing.mp4`, `${jscss}gril.mp4`, `${jscss}mountain.mp4`],
+      videoList: [`${jscss}jing.mp4`, `${jscss}mountain.mp4`],
       videoIndex: 0
     }
   },
